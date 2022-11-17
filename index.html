@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Graphics Seminar</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+	* {
+	  box-sizing: border-box;
+	}
+
+	.row {
+	  display: flex;
+	}
+
+	/* Create three equal columns that sits next to each other */
+	.column {
+	  flex: 33.33%;
+	  padding: 5px;
+	}
+	</style>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-background-image = "cover.png">
+				</section>
+
+				<section>
+					<h2>Related Work</h2>
+					<ol>
+						<li>Rigid Body Methods
+								<p class="fragment" style="  font-size: 1.875rem; line-height: 2.25rem;"> Intersections, instabilities, inaccuracies</p>
+								<p class="fragment" style="  font-size: 1.875rem; line-height: 2.25rem;"> Slow performances that grow with contact-problem complexity</p>
+						</li>
+						<li> Incremental Potential Contact(IPC)
+								<p class="fragment" style="  font-size: 1.875rem; line-height: 2.25rem;"> Solution convergence, guaranteed non-intersection, and accurate frictional contact </p>
+						</li>
+						<li> Rigid-IPC
+								<p class="fragment" style="  font-size: 1.875rem; line-height: 2.25rem;"> Preserves all guarantees of the underlying IPC model</p>
+								<p class="fragment" style="  font-size: 1.875rem; line-height: 2.25rem;"> The trajectory becomes curved</p>
+						</li>
+					</ol>
+				</section>
+
+				<section data-background-iframe="https://ipc-sim.github.io/" data-background-interactive>
+				</section>
+
+				<section data-background-iframe="ipc.pdf" data-background-interactive></section>
+
+				<section data-background-iframe="ABD.pdf" data-background-interactive></section>
+				
+				<section data-background-iframe="https://dannykaufman.io/projects/ABD/ABD.mp4" data-background-interactive></section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
